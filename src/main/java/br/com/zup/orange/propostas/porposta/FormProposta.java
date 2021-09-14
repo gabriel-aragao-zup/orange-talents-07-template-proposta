@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import java.math.BigDecimal;
 
-public class FormPropostas {
+public class FormProposta {
     @NotBlank
     @CPFOrCNPJ
     private String documento;
@@ -23,7 +23,7 @@ public class FormPropostas {
     @Positive
     private BigDecimal salario;
 
-    public FormPropostas(String documento, String email, String nome, String endereco, BigDecimal salario) {
+    public FormProposta(String documento, String email, String nome, String endereco, BigDecimal salario) {
         this.documento = documento;
         this.email = email;
         this.nome = nome;
@@ -33,5 +33,9 @@ public class FormPropostas {
 
     public Proposta toModel(){
         return new Proposta(documento, email, nome, endereco, salario);
+    }
+
+    public String getDocumento() {
+        return documento;
     }
 }

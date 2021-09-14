@@ -24,6 +24,10 @@ public class Proposta {
     private String endereco;
     private BigDecimal salario;
 
+    @Deprecated
+    public Proposta() {
+    }
+
     public Proposta(@NotBlank String documento, @NotBlank @Email String email, @NotBlank String nome, @NotBlank String endereco, @NotNull @Positive BigDecimal salario) {
         this.documento = documento;
         this.email = email;
