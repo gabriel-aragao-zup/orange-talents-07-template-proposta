@@ -32,7 +32,7 @@ public class FormProposta {
     }
 
     public Proposta toModel(){
-        return new Proposta(documento, email, nome, endereco, salario);
+        return new Proposta(documento, email, nome, endereco, salario, StatusProposta.NAO_VERIFICADA);
     }
 
     public String getDocumento() {
